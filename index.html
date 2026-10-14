@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PetHealth | Clínica veterinaria</title>
+  <meta name="description" content="PetHealth: agenda citas, consulta el historial clínico y cuida a tu mascota.">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="visually-hidden-focusable skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+          <img src="assets/img/logo.svg" width="36" height="36" alt="">
+          <span>PetHealth</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+            <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="#equipo">Equipo</a></li>
+            <li class="nav-item"><a class="nav-link" href="#tutores">Tutores</a></li>
+            <li class="nav-item"><a class="btn btn-accent ms-lg-2" href="#cita">Agendar cita</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section id="inicio" aria-label="Destacados">
+      <div id="carrusel" class="carousel slide" data-bs-ride="carousel" aria-label="Carrusel de destacados">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carrusel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Diapositiva 1"></button>
+          <button type="button" data-bs-target="#carrusel" data-bs-slide-to="1" aria-label="Diapositiva 2"></button>
+          <button type="button" data-bs-target="#carrusel" data-bs-slide-to="2" aria-label="Diapositiva 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <article class="carousel-item active">
+            <img src="assets/img/slide1.svg" class="d-block w-100" alt="Huellas de mascota sobre fondo verde azulado">
+            <div class="carousel-caption-box">
+              <h1>Tu mascota, con historial clínico siempre a la mano</h1>
+              <p>Consulta vacunas, recetas y estudios desde cualquier dispositivo.</p>
+              <a href="#cita" class="btn btn-accent btn-lg">Agendar cita</a>
+            </div>
+          </article>
+          <article class="carousel-item">
+            <img src="assets/img/slide2.svg" class="d-block w-100" alt="Cruz médica sobre fondo oscuro">
+            <div class="carousel-caption-box">
+              <h2>Urgencias atendidas todos los días</h2>
+              <p>Línea de emergencia de 8:00 a 22:00 h, incluso en festivos.</p>
+              <a href="#contacto" class="btn btn-outline-light btn-lg">Ver contacto</a>
+            </div>
+          </article>
+          <article class="carousel-item">
+            <img src="assets/img/slide3.svg" class="d-block w-100" alt="Huellas sobre fondo verde">
+            <div class="carousel-caption-box">
+              <h2>Recordatorios de vacunación automáticos</h2>
+              <p>Te avisamos por correo antes de cada refuerzo.</p>
+              <a href="#servicios" class="btn btn-outline-light btn-lg">Ver servicios</a>
+            </div>
+          </article>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carrusel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="servicios" class="container section-pad" aria-labelledby="t-servicios">
+      <h2 id="t-servicios" class="section-title">Lo que hacemos por tu mascota</h2>
+      <div class="cards-grid">
+        <article class="card service-card h-100">
+          <div class="card-body">
+            <span class="service-badge bg-mint" aria-hidden="true">V</span>
+            <h3 class="card-title h5">Consulta general</h3>
+            <p class="card-text">Revisión completa, diagnóstico y plan de tratamiento registrado en el expediente.</p>
+          </div>
+          <div class="card-footer"><a href="#cita" class="stretched-link">Agendar consulta</a></div>
+        </article>
+        <article class="card service-card h-100">
+          <div class="card-body">
+            <span class="service-badge bg-sun" aria-hidden="true">+</span>
+            <h3 class="card-title h5">Vacunación y desparasitación</h3>
+            <p class="card-text">Esquemas por especie y edad, con recordatorio antes de cada refuerzo.</p>
+          </div>
+          <div class="card-footer"><a href="#cita" class="stretched-link">Agendar vacuna</a></div>
+        </article>
+        <article class="card service-card h-100">
+          <div class="card-body">
+            <span class="service-badge bg-mint" aria-hidden="true">C</span>
+            <h3 class="card-title h5">Cirugía y hospitalización</h3>
+            <p class="card-text">Quirófano equipado y seguimiento diario del paciente durante su estancia.</p>
+          </div>
+          <div class="card-footer"><a href="#cita" class="stretched-link">Solicitar valoración</a></div>
+        </article>
+        <article class="card service-card h-100">
+          <div class="card-body">
+            <span class="service-badge bg-sun" aria-hidden="true">E</span>
+            <h3 class="card-title h5">Estudios de laboratorio</h3>
+            <p class="card-text">Análisis de sangre y rayos X con resultados disponibles en tu cuenta.</p>
+          </div>
+          <div class="card-footer"><a href="#cita" class="stretched-link">Agendar estudio</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="equipo" class="team-band" aria-labelledby="t-equipo">
+      <div class="container section-pad">
+        <h2 id="t-equipo" class="section-title">Nuestro equipo</h2>
+        <div class="row g-4">
+          <article class="col-12 col-md-4"><div class="team-item"><h3 class="h5">Dra. Mariana Lozano</h3><p class="mb-0">Medicina interna y felinos</p></div></article>
+          <article class="col-12 col-md-4"><div class="team-item"><h3 class="h5">Dr. Andrés Quintero</h3><p class="mb-0">Cirugía y traumatología</p></div></article>
+          <article class="col-12 col-md-4"><div class="team-item"><h3 class="h5">Dra. Sofía Arellano</h3><p class="mb-0">Medicina preventiva y vacunación</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="tutores" class="container section-pad" aria-labelledby="t-tutores">
+      <h2 id="t-tutores" class="section-title">Tutores registrados</h2>
+      <p class="mb-3">Datos cargados desde una API REST de prueba (JSONPlaceholder) con <code>fetch</code>, sin recargar la página.</p>
+      <div id="estadoTutores" class="alert alert-secondary d-none" role="status"></div>
+      <div id="listaTutores" class="tutores-grid"></div>
+      <div class="d-flex flex-wrap align-items-center gap-2 mt-3">
+        <button id="btnMasTutores" type="button" class="btn btn-accent">Cargar más</button>
+        <button id="btnReiniciarTutores" type="button" class="btn btn-outline-secondary d-none">Reiniciar lista</button>
+        <span id="contadorTutores" class="small text-muted" aria-live="polite"></span>
+      </div>
+    </section>
+
+    <section id="cita" class="container section-pad" aria-labelledby="t-cita">
+      <div class="form-layout">
+        <div class="form-intro">
+          <h2 id="t-cita" class="section-title">Agenda una cita</h2>
+          <p>Llena los datos del dueño y de la mascota. Te confirmaremos por correo en menos de un día hábil.</p>
+          <ul class="list-unstyled small mb-0">
+            <li>Horario: lunes a sábado, 9:00 a 19:00 h</li>
+            <li>Urgencias: todos los días, 8:00 a 22:00 h</li>
+          </ul>
+
+          <div class="citas-panel" aria-labelledby="t-citas">
+            <div class="d-flex justify-content-between align-items-center gap-2 mb-2">
+              <h3 id="t-citas" class="h6 mb-0">Solicitudes de esta sesión</h3>
+              <span id="contadorCitas" class="badge text-bg-secondary">0 solicitudes</span>
+            </div>
+            <p id="citasVacio" class="small text-muted mb-0">Aún no has enviado solicitudes. Completa el formulario para agregar una.</p>
+            <ul id="listaCitas" class="list-unstyled mb-0"></ul>
+            <button id="btnVaciarCitas" type="button" class="btn btn-sm btn-link text-danger px-0 mt-2 d-none">Vaciar lista</button>
+            <p id="avisoCitas" class="visually-hidden" role="status" aria-live="polite"></p>
+          </div>
+        </div>
+        <form id="formCita" class="card form-card" novalidate>
+          <div class="card-body row g-3">
+            <h3 class="h5 col-12 mb-0">Datos del dueño</h3>
+            <div class="col-12 col-md-6">
+              <label for="nombre" class="form-label">Nombre completo</label>
+              <input type="text" class="form-control" id="nombre" required minlength="5" autocomplete="name">
+              <div class="invalid-feedback">Escribe tu nombre completo (mínimo 5 caracteres).</div>
+              <div class="valid-feedback">Listo.</div>
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="correo" class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" id="correo" required autocomplete="email">
+              <div class="invalid-feedback">Ingresa un correo válido, por ejemplo nombre@dominio.com.</div>
+              <div class="valid-feedback">Listo.</div>
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="telefono" class="form-label">Teléfono (10 dígitos)</label>
+              <input type="tel" class="form-control" id="telefono" required pattern="[0-9]{10}" inputmode="numeric" autocomplete="tel">
+              <div id="telefonoAyuda" class="form-text" aria-live="polite">0/10 dígitos</div>
+              <div class="invalid-feedback">Usa solo 10 números, sin espacios ni guiones.</div>
+              <div class="valid-feedback">Listo.</div>
+            </div>
+
+            <h3 class="h5 col-12 mb-0 mt-4">Datos de la mascota</h3>
+            <div class="col-12 col-md-6">
+              <label for="mascota" class="form-label">Nombre de la mascota</label>
+              <input type="text" class="form-control" id="mascota" required minlength="2">
+              <div class="invalid-feedback">Escribe el nombre de tu mascota.</div>
+              <div class="valid-feedback">Listo.</div>
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="especie" class="form-label">Especie</label>
+              <select class="form-select" id="especie" required>
+                <option value="" selected disabled>Elige una opción</option>
+                <option>Perro</option><option>Gato</option><option>Ave</option><option>Conejo</option><option>Otra</option>
+              </select>
+              <div class="invalid-feedback">Selecciona la especie.</div>
+              <div class="valid-feedback">Listo.</div>
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="fecha" class="form-label">Fecha de la cita</label>
+              <input type="date" class="form-control" id="fecha" required>
+              <div class="invalid-feedback">Elige una fecha de hoy en adelante.</div>
+              <div class="valid-feedback">Listo.</div>
+            </div>
+            <div class="col-12">
+              <label for="motivo" class="form-label">Motivo de la consulta</label>
+              <textarea class="form-control" id="motivo" rows="3" required minlength="10"></textarea>
+              <div class="invalid-feedback">Cuéntanos el motivo en al menos 10 caracteres.</div>
+              <div class="valid-feedback">Listo.</div>
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="privacidad" required>
+                <label class="form-check-label" for="privacidad">Acepto el aviso de privacidad.</label>
+                <div class="invalid-feedback">Debes aceptar el aviso para continuar.</div>
+              </div>
+            </div>
+            <div class="col-12 d-flex flex-wrap gap-2">
+              <button class="btn btn-accent" type="submit" id="btnEnviar">Enviar solicitud</button>
+              <button class="btn btn-outline-secondary" type="reset" id="btnLimpiar">Limpiar formulario</button>
+            </div>
+            <div class="col-12">
+              <div id="exito" class="alert alert-success d-none mb-0" role="status"></div>
+              <div id="errorEnvio" class="alert alert-danger d-none mb-0" role="alert"></div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contacto" class="site-footer">
+    <div class="container footer-flex">
+      <div>
+        <strong>PetHealth</strong>
+        <p class="mb-0 small">Clínica veterinaria ficticia para la actividad de Fundamentos de Aplicaciones Web.</p>
+      </div>
+      <address class="mb-0 small">Av. Insurgentes 100, Ciudad de México<br>Tel. 55 1234 5678 · hola@pethealth.example</address>
+    </div>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/citas.js"></script>
+  <script src="js/tutores.js"></script>
+  <script src="js/validacion.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+:root{
+  --ph-teal:#0E5A5F; --ph-ink:#14282B; --ph-mint:#CFE8D5; --ph-sun:#F2C14E; --ph-paper:#F7FAF8;
+  --bs-body-font-family:"Trebuchet MS","Segoe UI",system-ui,sans-serif;
+  --bs-body-color:var(--ph-ink); --bs-body-bg:var(--ph-paper);
+  --bs-primary:var(--ph-teal); --bs-link-color:var(--ph-teal);
+}
+h1,h2,h3,.navbar-brand{font-family:Georgia,"Times New Roman",serif;letter-spacing:-.01em}
+.skip-link{position:absolute;z-index:2000;left:.5rem;top:.5rem;background:#fff;padding:.5rem 1rem}
+:focus-visible{outline:3px solid var(--ph-sun);outline-offset:2px}
+
+/* Header con Flexbox */
+.site-header{background:var(--ph-teal);position:sticky;top:0;z-index:1030}
+.site-header .navbar{padding-block:.6rem}
+.site-header .navbar-brand{color:#fff;font-size:1.4rem;font-weight:700}
+.site-header .nav-link{color:#e8f3ee}
+.site-header .nav-link:hover{color:var(--ph-sun)}
+.navbar-toggler{border-color:rgba(255,255,255,.5)}
+.navbar-toggler-icon{filter:invert(1)}
+.btn-accent{background:var(--ph-sun);color:var(--ph-ink);border:0;font-weight:700}
+.btn-accent:hover{background:#e6b236;color:var(--ph-ink)}
+
+/* Carrusel */
+.carousel-item{position:relative;min-height:340px;background:var(--ph-teal)}
+.carousel-item img{height:clamp(340px,52vw,520px);object-fit:cover}
+.carousel-caption-box{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:.75rem;
+  padding:2rem clamp(2.5rem,8vw,7rem);color:#fff;max-width:760px}
+.carousel-caption-box h1,.carousel-caption-box h2{font-size:clamp(1.5rem,3.6vw,2.8rem);line-height:1.15;margin:0}
+.carousel-caption-box p{font-size:clamp(.95rem,1.6vw,1.2rem);margin:0}
+
+/* Secciones y tarjetas con CSS Grid */
+.section-pad{padding-block:clamp(2.5rem,6vw,4.5rem)}
+.section-title{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:1.75rem}
+.cards-grid{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.service-card{border:1px solid #d6e4dc;border-radius:.9rem;background:#fff}
+.service-card .card-footer{background:transparent;border:0;padding:0 1rem 1rem}
+.service-card .card-footer a{font-weight:700;text-underline-offset:3px}
+.service-badge{display:inline-grid;place-items:center;width:2.6rem;height:2.6rem;border-radius:50%;font-weight:700;margin-bottom:.9rem}
+.bg-mint{background:var(--ph-mint)} .bg-sun{background:var(--ph-sun)}
+.team-band{background:var(--ph-mint)}
+.team-item{background:#fff;border-left:6px solid var(--ph-teal);padding:1.1rem 1.25rem;border-radius:.4rem}
+
+/* Formulario */
+.form-layout{display:grid;gap:2rem;grid-template-columns:1fr}
+@media (min-width:992px){.form-layout{grid-template-columns:1fr 1.7fr;align-items:start}}
+.form-card{border:1px solid #d6e4dc;border-radius:.9rem}
+fieldset{border:0}
+legend{float:none;width:auto;font-family:Georgia,serif;padding:0}
+.form-control:focus,.form-select:focus,.form-check-input:focus{border-color:var(--ph-teal);box-shadow:0 0 0 .25rem rgba(14,90,95,.2)}
+
+/* Footer con Flexbox */
+.site-footer{background:var(--ph-ink);color:#d7e3de;padding-block:2rem}
+.footer-flex{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.25rem}
+.site-footer address{text-align:right}
+@media (max-width:575.98px){.site-footer address{text-align:left}}
+@media (prefers-reduced-motion:reduce){.carousel-item{transition:none}}
+
+/* Ajustes */
+legend{width:100%;padding-inline:.25rem;margin-bottom:0}
+.service-card .card-footer a{color:var(--ph-teal)}
+.service-card .card-footer a:hover{color:var(--ph-ink)}
+
+/* ===== Actividad: interfaz dinámica ===== */
+
+/* Tutores cargados desde la API (CSS Grid) */
+.tutores-grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.tutor-card{display:flex;gap:.9rem;align-items:center;background:#fff;border:1px solid #d6e4dc;border-radius:.9rem;padding:1rem;animation:aparecer .3s ease-out}
+.tutor-avatar{flex:none;display:grid;place-items:center;width:2.8rem;height:2.8rem;border-radius:50%;background:var(--ph-teal);color:#fff;font-weight:700;font-family:Georgia,serif}
+.tutor-body{min-width:0}
+.tutor-body p{overflow-wrap:anywhere}
+@keyframes aparecer{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* Lista de solicitudes de cita (se agrega/elimina con JavaScript) */
+.citas-panel{margin-top:1.5rem;background:#fff;border:1px solid #d6e4dc;border-radius:.9rem;padding:1rem}
+.cita-item{display:flex;justify-content:space-between;align-items:center;gap:.75rem;padding:.65rem 0;border-top:1px solid #e3ede7;animation:aparecer .3s ease-out}
+.cita-item:first-child{border-top:0}
+.cita-info{min-width:0;overflow-wrap:anywhere}
+
+/* Retroalimentación de validación en tiempo real */
+.form-text{font-size:.8rem}
+@media (prefers-reduced-motion:reduce){.tutor-card,.cita-item{animation:none}}
